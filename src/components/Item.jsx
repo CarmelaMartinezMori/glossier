@@ -1,8 +1,10 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
-function Item({name, description, stock, img}) {
+function Item({name, description, img, id}) {
   return (
+    <Link to={`/item/${id}`}>
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={img} />
         <Card.Body>
@@ -11,6 +13,7 @@ function Item({name, description, stock, img}) {
           <Button variant="primary">Add to Cart</Button>
         </Card.Body>
       </Card>
+    </Link>
   );
 }
 

@@ -4,20 +4,25 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget from './CartWidget'
+import { NavLink } from 'react-router-dom';
+
 
 const NavBar = () => {
   return (
     <div>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home">Glossier</Navbar.Brand>
+          <NavLink to='/'>
+            <Navbar.Brand>Glossier</Navbar.Brand>
+          </NavLink>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto">
-              <Nav.Link href="#home">Skincare</Nav.Link>
-              <Nav.Link href="#makeup">Makeup</Nav.Link>
-              <Nav.Link href="#body">Body</Nav.Link>
-              <Nav.Link href="#fragrance">Fragrance</Nav.Link>
+              
+              <Nav.Link href="/category/skincare">Skincare</Nav.Link>
+              <Nav.Link href="/category/makeup">Makeup</Nav.Link>
+              <Nav.Link href="/category/body">Body</Nav.Link>
+              <Nav.Link href="/category/fragrance">Fragrance</Nav.Link>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
