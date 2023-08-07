@@ -30,24 +30,26 @@ const products = [
   ];
   
   
-const ItemDetailContainer = () => {
-    const [data, setData] = useState({})
-    const {itemId} = useParams()
-   console.log(itemId)
+  const ItemDetailContainer = () => {
+    const [data, setData] = useState({});
+    const { itemId } = useParams();
+    console.log(itemId)
+  
+    useEffect(() => {
+      const getData = new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(products.find((p) => p.id === parseInt(itemId)));
+        }, 2000);
+      });
+      getData.then((res) => setData(res));
+    }, [itemId]);
+  
+    return data.id ? (
+      <ItemDetail id={data.id} img={data.img} name={data.name} description={data.description} />
+    ) : (
+      <p>Loading...</p>
+    );
+    
+  };
 
-   useEffect(() => {
-     const getData = new Promise((resolve) => {
-       setTimeout(() => {
-         resolve(products);
-       }, 2000);
-     });
-        getData.then(res => setData(res.find(p => p.id === parseInt(itemId))));
-     
-    }, [])
-
-   return (
-        <ItemDetail data = {data}/>
-   );
-}
-
-export default ItemDetailContainer
+export default ItemDetailContainer;

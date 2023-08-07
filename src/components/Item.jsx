@@ -2,7 +2,11 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
-function Item({name, description, img, id}) {
+function Item({id, img, name, description}) {
+  console.log(id)
+  console.log(name)
+  console.log(img)
+  console.log(description)
   return (
     <Link to={`/item/${id}`}>
       <Card style={{ width: "18rem" }}>
