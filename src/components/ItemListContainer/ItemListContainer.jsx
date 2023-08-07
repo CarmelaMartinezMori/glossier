@@ -3,6 +3,8 @@ import "./ItemListContainer.css"
 import ItemCount from '../ItemCount'
 import ItemList from '../ItemList'
 import { useParams } from 'react-router-dom'
+import { CardGroup } from 'react-bootstrap'
+
 
 
 const products = [
@@ -29,6 +31,22 @@ const products = [
     name: 'Producto 3',
     description: 'Descripción del producto 3',
     stock: 8,
+  },
+  {
+    id: 4,
+    img: "https://glossier-prod.imgix.net/products/glossier-cloudpaint-beam-carousel-01.png?auto=compress,format&cs=srgb&w=180",
+    category:'body',
+    name: 'Producto 4',
+    description: 'Descripción del producto 4',
+    stock: 6,
+  },
+  {
+    id: 5,
+    img: "https://glossier-prod.imgix.net/products/glossier-cloudpaint-beam-carousel-01.png?auto=compress,format&cs=srgb&w=180",
+    category:'body',
+    name: 'Producto 5',
+    description: 'Descripción del producto 5',
+    stock: 4,
   },
 ];
 
@@ -58,18 +76,12 @@ const ItemListContainer = ({greeting}) => {
   }
 
   return (
-    <div>
-        <div className="jumbotron">
-          <h1 className="display-4">{greeting}</h1>
-          <p className="lead">Discover a curated collection of makeup essentials designed to enhance your natural beauty and embrace your unique style. </p>
-          <hr className="my-4"/>
-          <p>Glossier is all about celebrating your individuality and empowering you to shine from within</p>
-          <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-          <ItemCount initial={0} stock={10} onAdd={onAdd}/>
-          <ItemList data={data}/>
-        </div>
-    </div>
+    <CardGroup>
+      <ItemList data={data}/>
+    </CardGroup>
+
   )
 }
 
 export default ItemListContainer
+
