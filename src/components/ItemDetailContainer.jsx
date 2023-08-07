@@ -6,7 +6,7 @@ const products = [
     {
       id: 1,
       img: "https://glossier-prod.imgix.net/products/glossier-cloudpaint-beam-carousel-01.png?auto=compress,format&cs=srgb&w=180",
-      name: 'Producto 1',
+      name: 'Product 1',
       category: 'skincare',
       description: 'Descripción del producto 1',
       stock: 10,
