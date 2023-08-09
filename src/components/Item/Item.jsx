@@ -1,17 +1,25 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
-import './Item.css'
+import './Item.css'; // Importa tu archivo CSS
 
-function Item({id, img, name, description}) {
+function Item({ id, img, name, description, price }) {
   return (
-    <Link to={`/item/${id}`}>
-      <Card style={{ width: "18rem",  margin: '5px'}}>
+    <Link to={`/item/${id}`} className="link-no-underline">
+      <Card className="card-container" style={{ width: "18rem", margin: '10px' }}>
         <Card.Img variant="top" src={img} />
         <Card.Body>
-          <Card.Title >{name}</Card.Title>
-          <Card.Text>{description}</Card.Text>
-          <Button variant="primary">Add to Cart</Button>
+          <div className="product-info">
+            <div className="name-and-price">
+              <Card.Title>{name}</Card.Title>
+              <span className="price">{price}</span>
+            </div>
+            <Card.Text>{description}</Card.Text>
+            <div className="card-buttons">
+              <Button variant="none" className="card-button">Add to Cart</Button>
+            </div>
+          </div>
         </Card.Body>
       </Card>
     </Link>
