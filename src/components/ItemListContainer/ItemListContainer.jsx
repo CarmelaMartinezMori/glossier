@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import "./ItemListContainer.css"
 import ItemCount from '../ItemCount'
-import ItemList from '../ItemList'
+import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
 import { CardGroup } from 'react-bootstrap'
 
@@ -76,8 +76,8 @@ const ItemListContainer = ({greeting}) => {
   }
 
   return (
-    <CardGroup>
-      <ItemList data={data}/>
+    <CardGroup className='item-list-container'>
+      <ItemList className='item-list' data={data}/>
     </CardGroup>
 
   )
