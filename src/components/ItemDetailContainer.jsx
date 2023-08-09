@@ -3,31 +3,52 @@ import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom';
 
 const products = [
-    {
-      id: 1,
-      img: "https://glossier-prod.imgix.net/products/glossier-cloudpaint-beam-carousel-01.png?auto=compress,format&cs=srgb&w=180",
-      name: 'Product 1',
-      category: 'skincare',
-      description: 'Descripción del producto 1',
-      stock: 10,
-    },
-    {
-      id: 2,
-      img: "https://glossier-prod.imgix.net/products/glossier-cloudpaint-beam-carousel-01.png?auto=compress,format&cs=srgb&w=180",
-      category:'makeup',
-      name: 'Producto 2',
-      description: 'Descripción del producto 2',
-      stock: 5,
-    },
-    {
-      id: 3,
-      img: "https://glossier-prod.imgix.net/products/glossier-cloudpaint-beam-carousel-01.png?auto=compress,format&cs=srgb&w=180",
-      category:'body',
-      name: 'Producto 3',
-      description: 'Descripción del producto 3',
-      stock: 8,
-    },
-  ];
+  {
+    id: 1,
+    img: "https://glossier-prod.imgix.net/products/glossier-cloudpaint-beam-carousel-01.png?auto=compress,format&cs=srgb&w=916",
+    name: 'Cloud Paint',
+    category: 'skincare',
+    description: 'Seamless cheek color',
+    price: '$20',
+    stock: 10,
+  },
+  {
+    id: 2,
+    img: "https://glossier-prod.imgix.net/products/glossier-boybrow-black-01.png?auto=compress,format&cs=srgb&w=720",
+    category:'makeup',
+    name: 'Boy Brow',
+    description: 'Grooming Pomade',
+    price: '$18',
+    stock: 5,
+  },
+  {
+    id: 3,
+    img: "https://glossier-prod.imgix.net/products/glossier-ultralip-catchet-01.png?auto=compress,format&cs=srgb&w=720",
+    category:'makeup',
+    name: 'Ultralip',
+    description: 'Nourishing shine and color',
+    price: '$18',
+    stock: 8,
+  },
+  {
+    id: 4,
+    img: "https://glossier-prod.imgix.net/files/glossier-boybrow-bdc-futuredew-carousel-01_fb8cc493-42dd-426c-9f3b-7e51a3ee21fc.png?auto=compress,format&cs=srgb&w=900",
+    category:'makeup',
+    name: 'Fresh-Faced Set',
+    description: 'Boy Brow + Balm Dotcom + Futuredew',
+    price: '$48',
+    stock: 6,
+  },
+  {
+    id: 5,
+    img: "https://glossier-prod.imgix.net/products/glossier-deo-you-carousel-01.png?auto=compress,format&cs=srgb&w=1296",
+    category:'body',
+    name: 'Deodorant',
+    description: 'Smooth glide odor defence',
+    price: '$22',
+    stock: 4,
+  },
+];
   
   
   const ItemDetailContainer = () => {

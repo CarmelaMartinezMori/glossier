@@ -29,7 +29,7 @@ const products = [
   {
     id: 3,
     img: "https://glossier-prod.imgix.net/products/glossier-ultralip-catchet-01.png?auto=compress,format&cs=srgb&w=720",
-    category:'body',
+    category:'makeup',
     name: 'Ultralip',
     description: 'Nourishing shine and color',
     price: '$18',
@@ -57,7 +57,7 @@ const products = [
 
 
 ///
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
  
   const [data, setData] = useState([])
 
