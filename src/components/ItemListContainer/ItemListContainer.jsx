@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import "./ItemListContainer.css"
-import ItemCount from '../ItemCount'
+import ItemCount from '../ItemCount/ItemCount'
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
 import { CardGroup } from 'react-bootstrap'
@@ -58,10 +58,9 @@ const products = [
 
 ///
 const ItemListContainer = () => {
- 
-  const [data, setData] = useState([])
-
-  const {categoryId} = useParams()
+  const [data, setData] = useState([]);
+  const [dataTitle, setDataTitle] = useState(''); // Variable para almacenar el título de la categoría
+  const { categoryId } = useParams();
 
   useEffect(() => {
     const getData = new Promise((resolve) => {
@@ -69,23 +68,29 @@ const ItemListContainer = () => {
         resolve(products);
       }, 2000);
     });
+
     if (categoryId) {
-      getData.then(res => setData(res.filter(p => p.category === categoryId)));
-    }else{
-      getData.then(res => setData(res));
+      getData.then((res) => {
+        const filteredData = res.filter((p) => p.category === categoryId);
+        setData(filteredData);
+        setDataTitle(filteredData.length > 0 ? filteredData[0].category : '');
+      });
+    } else {
+      getData.then((res) => {
+        setData(res);
+        setDataTitle('');
+      });
     }
-  }, [categoryId])
-  
-  const onAdd = (quant) => {
-    console.log(`Compraste ${quant}`)
-  }
+  }, [categoryId]);
 
   return (
-    <CardGroup className='item-list-container'>
-      <ItemList className='item-list' data={data}/>
-    </CardGroup>
-
-  )
+    <React.Fragment>
+      <h4 className="category-title">{dataTitle}</h4>
+      <CardGroup className='item-list-container'>
+        <ItemList className='item-list' data={data} />
+      </CardGroup>
+    </React.Fragment>
+  );
 }
 
 export default ItemListContainer

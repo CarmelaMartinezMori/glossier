@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import ItemDetail from './ItemDetail'
+import ItemDetail from './ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 
 const products = [
@@ -8,7 +8,7 @@ const products = [
     img: "https://glossier-prod.imgix.net/products/glossier-cloudpaint-beam-carousel-01.png?auto=compress,format&cs=srgb&w=916",
     name: 'Cloud Paint',
     category: 'skincare',
-    description: 'Seamless cheek color',
+    description: 'A seamless, buildable gel-cream blush that looks so natural it’s like your cheeks made it. Enjoyable to apply and easy to wear, it´s just sheer enough to easily blend and layer without going overboard—simply dab it on cheeks and tap into skin for a natural-looking, flushed-from-within glow.',
     price: '$20',
     stock: 10,
   },
@@ -17,7 +17,7 @@ const products = [
     img: "https://glossier-prod.imgix.net/products/glossier-boybrow-black-01.png?auto=compress,format&cs=srgb&w=720",
     category:'makeup',
     name: 'Boy Brow',
-    description: 'Grooming Pomade',
+    description: 'Inspired by the flexible formula of mustache pomade, Boy Brow visibly defines, thickens and shapes for face-framing brows in seconds. A creamy, conditioning formula and a precision brush coats even the smallest and finest hairs for a soft, flexible hold that won’t stiffen or flake. Available in a range of subtly-tinted shades that seamlessly blend in with your natural hairs plus Clear (that won’t leave a trace).',
     price: '$18',
     stock: 5,
   },
@@ -66,7 +66,7 @@ const products = [
     }, [itemId]);
   
     return data.id ? (
-      <ItemDetail id={data.id} img={data.img} name={data.name} description={data.description} />
+      <ItemDetail id={data.id} img={data.img} name={data.name} description={data.description} price={data.price} />
     ) : (
       <p>Loading...</p>
     );

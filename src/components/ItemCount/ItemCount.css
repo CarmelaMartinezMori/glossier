@@ -1,0 +1,49 @@
+/* ItemCount.css */
+
+.item-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .count-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .count-controls button {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .count-controls button:hover {
+    background-color: #ddd;
+    border-color: #999;
+  }
+  
+  .count-controls span {
+    margin: 0 12px;
+    font-size: 16px;
+  }
+  
+  .add-to-bag-button {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .add-to-bag-button:hover {
+    background-color: #ddd;
+    border-color: #999;
+  }
+  

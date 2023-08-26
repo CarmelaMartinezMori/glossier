@@ -3,3 +3,10 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.category-title {
+    text-align: center;
+    font-weight: 500;
+    margin: 10px;
+    text-transform: capitalize; /* Centra el texto horizontalmente */
+}
