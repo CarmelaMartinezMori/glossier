@@ -14,8 +14,8 @@ const products = [
     name: 'Cloud Paint',
     category: 'skincare',
     description: 'Seamless cheek color',
-    price: '$20',
-    quantity: 10,
+    price: 20,
+    //quantity: 10,
   },
   {
     id: 2,
@@ -23,8 +23,8 @@ const products = [
     category:'makeup',
     name: 'Boy Brow',
     description: 'Grooming Pomade',
-    price: '$18',
-    quantity: 5,
+    price: 18,
+    //quantity: 5,
   },
   {
     id: 3,
@@ -32,8 +32,8 @@ const products = [
     category:'makeup',
     name: 'Ultralip',
     description: 'Nourishing shine and color',
-    price: '$18',
-    quantity: 8,
+    price: 18,
+    //quantity: 8,
   },
   {
     id: 4,
@@ -41,8 +41,8 @@ const products = [
     category:'makeup',
     name: 'Fresh-Faced Set',
     description: 'Boy Brow + Balm Dotcom + Futuredew',
-    price: '$48',
-    quantity: 6,
+    price: 48,
+    //quantity: 6,
   },
   {
     id: 5,
@@ -50,8 +50,8 @@ const products = [
     category:'body',
     name: 'Deodorant',
     description: 'Smooth glide odor defence',
-    price: '$22',
-    quantity: 4,
+    price: 22,
+    //quantity: 4,
   },
 ];
 

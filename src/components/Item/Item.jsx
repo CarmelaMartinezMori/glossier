@@ -17,7 +17,7 @@ function Item({ id, img, name, description, price, quantity }) {
           <div className="product-info">
             <div className="name-and-price">
               <Card.Title>{name}</Card.Title>
-              <span className="price">{price}</span>
+              <span className="price">${price}</span>
             </div>
             <Card.Text>{description}</Card.Text>
             <div className="card-buttons">

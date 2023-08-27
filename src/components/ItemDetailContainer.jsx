@@ -10,8 +10,8 @@ const products = [
     name: 'Cloud Paint',
     category: 'skincare',
     description: 'A seamless, buildable gel-cream blush that looks so natural it’s like your cheeks made it. Enjoyable to apply and easy to wear, it´s just sheer enough to easily blend and layer without going overboard—simply dab it on cheeks and tap into skin for a natural-looking, flushed-from-within glow.',
-    price: '$20',
-    quantity: 10,
+    price: 20,
+    //quantity: 10,
   },
   {
     id: 2,
@@ -19,8 +19,8 @@ const products = [
     category:'makeup',
     name: 'Boy Brow',
     description: 'Inspired by the flexible formula of mustache pomade, Boy Brow visibly defines, thickens and shapes for face-framing brows in seconds. A creamy, conditioning formula and a precision brush coats even the smallest and finest hairs for a soft, flexible hold that won’t stiffen or flake. Available in a range of subtly-tinted shades that seamlessly blend in with your natural hairs plus Clear (that won’t leave a trace).',
-    price: '$18',
-    quantity: 5,
+    price: 18,
+    //quantity: 5,
   },
   {
     id: 3,
@@ -28,8 +28,8 @@ const products = [
     category:'makeup',
     name: 'Ultralip',
     description: 'Nourishing shine and color',
-    price: '$18',
-    quantity: 8,
+    price: 18,
+    //quantity: 8,
   },
   {
     id: 4,
@@ -37,8 +37,8 @@ const products = [
     category:'makeup',
     name: 'Fresh-Faced Set',
     description: 'Boy Brow + Balm Dotcom + Futuredew',
-    price: '$48',
-    quantity: 6,
+    price: 48,
+    //quantity: 6,
   },
   {
     id: 5,
@@ -46,8 +46,8 @@ const products = [
     category:'body',
     name: 'Deodorant',
     description: 'Smooth glide odor defence',
-    price: '$22',
-    quantity: 4,
+    price: 22,
+    //quantity: 4,
   },
 ];
   

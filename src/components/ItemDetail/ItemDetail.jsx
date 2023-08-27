@@ -18,7 +18,7 @@ const ItemDetail = ({ img, name, description, price, onAddToCart }) => {
         <div className="item-info">
           <h1 className="item-name">{name}</h1>
           <p className="item-description">{description}</p>
-          <div className="item-price">{price}</div>
+          <div className="item-price"> ${price}</div>
           <div className="add-to-bag-button-container">
             {goToCart ? (
               <Link to="/cart">End Purchase</Link>
