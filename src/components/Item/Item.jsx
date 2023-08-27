@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import './Item.css'; // Importa tu archivo CSS
+import './Item.css'; 
+import  {CartContext} from '../../context/CartContext';
+import ItemCount from '../ItemCount/ItemCount';
 
-function Item({ id, img, name, description, price }) {
+function Item({ id, img, name, description, price, quantity }) {
+  const nombre = useContext(CartContext);
+  
   return (
     <Link to={`/item/${id}`} className="link-no-underline">
       <Card className="card-container" style={{ width: "18rem", margin: '10px' }}>

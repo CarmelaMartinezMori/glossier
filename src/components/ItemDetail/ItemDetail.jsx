@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+// ItemDetail.jsx
+import React from 'react';
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 
-const ItemDetail = ({ img, name, description, price }) => {
-  const [goToCart, setGoToCart] = useState(false);
+const ItemDetail = ({ img, name, description, price, onAddToCart }) => {
+  const [goToCart, setGoToCart] = React.useState(false);
 
-  const handleAddToBag = (count) => {
-    setGoToCart(true)
+  const handleAddToCart = (count) => {
+    setGoToCart(true);
+    onAddToCart(count);
   };
 
   return (
@@ -18,11 +20,11 @@ const ItemDetail = ({ img, name, description, price }) => {
           <p className="item-description">{description}</p>
           <div className="item-price">{price}</div>
           <div className="add-to-bag-button-container">
-            {
-              goToCart ? <Link to='/cart'>End Purchase</Link>
-              :<ItemCount initial={1} stock={10} onAdd={handleAddToBag} />
-            }
-            
+            {goToCart ? (
+              <Link to="/cart">End Purchase</Link>
+            ) : (
+              <ItemCount initial={1} stock={10} onAdd={handleAddToCart} />
+            )}
           </div>
         </div>
         <div className="item-image-container">

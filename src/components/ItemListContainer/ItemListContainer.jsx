@@ -15,7 +15,7 @@ const products = [
     category: 'skincare',
     description: 'Seamless cheek color',
     price: '$20',
-    stock: 10,
+    quantity: 10,
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const products = [
     name: 'Boy Brow',
     description: 'Grooming Pomade',
     price: '$18',
-    stock: 5,
+    quantity: 5,
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const products = [
     name: 'Ultralip',
     description: 'Nourishing shine and color',
     price: '$18',
-    stock: 8,
+    quantity: 8,
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const products = [
     name: 'Fresh-Faced Set',
     description: 'Boy Brow + Balm Dotcom + Futuredew',
     price: '$48',
-    stock: 6,
+    quantity: 6,
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ const products = [
     name: 'Deodorant',
     description: 'Smooth glide odor defence',
     price: '$22',
-    stock: 4,
+    quantity: 4,
   },
 ];
 

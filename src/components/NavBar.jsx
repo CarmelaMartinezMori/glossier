@@ -1,28 +1,34 @@
-import React from 'react'
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import CartWidget from './CartWidget'
+import CartWidget from './CartWidget';
 import { NavLink } from 'react-router-dom';
-
 
 const NavBar = () => {
   return (
     <div>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <NavLink to='/'>
+          <NavLink to="/">
             <Navbar.Brand>Glossier</Navbar.Brand>
           </NavLink>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto">
-              
-              <Nav.Link href="/category/skincare">Skincare</Nav.Link>
-              <Nav.Link href="/category/makeup">Makeup</Nav.Link>
-              <Nav.Link href="/category/body">Body</Nav.Link>
-              <Nav.Link href="/category/fragrance">Fragrance</Nav.Link>
+              <NavLink to="/category/skincare" className="nav-link">
+                Skincare
+              </NavLink>
+              <NavLink to="/category/makeup" className="nav-link">
+                Makeup
+              </NavLink>
+              <NavLink to="/category/body" className="nav-link">
+                Body
+              </NavLink>
+              <NavLink to="/category/fragrance" className="nav-link">
+                Fragrance
+              </NavLink>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
@@ -38,13 +44,15 @@ const NavBar = () => {
               </NavDropdown>
             </Nav>
             <Nav>
-              <Nav.Link href="#cart"><CartWidget/></Nav.Link>
+              <NavLink to="/cart" className="nav-link">
+                <CartWidget />
+              </NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
     </div>
   );
-}
+};
 
-export default NavBar
+export default NavBar;
