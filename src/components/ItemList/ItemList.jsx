@@ -4,7 +4,7 @@ import Item from '../Item/Item'
 
 const ItemList = ({data = []}) => {
   return (
-        data.map(p => <Item id={p.id} img={p.img} name={p.name} description={p.description} price={p.price} quantity={p.quantity}/>)
+        data.map(p => <Item key={p.id} id={p.id} img={p.img} name={p.name} subdescription={p.subdescription} price={p.price} quantity={p.quantity}/>)
 
   )
 }

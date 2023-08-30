@@ -6,7 +6,7 @@ import './Item.css';
 import  {CartContext} from '../../context/CartContext';
 import ItemCount from '../ItemCount/ItemCount';
 
-function Item({ id, img, name, description, price, quantity }) {
+function Item({ id, img, name, subdescription, price }) {
   const nombre = useContext(CartContext);
   
   return (
@@ -19,7 +19,7 @@ function Item({ id, img, name, description, price, quantity }) {
               <Card.Title>{name}</Card.Title>
               <span className="price">${price}</span>
             </div>
-            <Card.Text>{description}</Card.Text>
+            <Card.Text>{subdescription}</Card.Text>
             <div className="card-buttons">
               <Button variant="none" className="card-button">Add to Cart</Button>
             </div>
