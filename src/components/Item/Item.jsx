@@ -4,7 +4,6 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './Item.css'; 
 import  {CartContext} from '../../context/CartContext';
-import ItemCount from '../ItemCount/ItemCount';
 
 function Item({ id, img, name, subdescription, price }) {
   const nombre = useContext(CartContext);
