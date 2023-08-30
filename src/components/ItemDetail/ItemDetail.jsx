@@ -1,4 +1,3 @@
-// ItemDetail.jsx
 import React from 'react';
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
@@ -21,7 +20,7 @@ const ItemDetail = ({ img, name, description, price, onAddToCart }) => {
           <div className="item-price"> ${price}</div>
           <div className="add-to-bag-button-container">
             {goToCart ? (
-              <Link to="/cart">End Purchase</Link>
+              <Link to="/cart">Go to Cart</Link>
             ) : (
               <ItemCount initial={1} stock={10} onAdd={handleAddToCart} />
             )}

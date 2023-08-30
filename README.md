@@ -10,7 +10,7 @@ Glossier E-Commerce es una aplicación web que permite a los usuarios explorar y
 
 Para probar este proyecto en tu entorno local, sigue estos pasos:
 
-1. Clona este repositorio: `git clone https://github.com/tu-usuario/glossier-ecommerce.git`
+1. Clona este repositorio: `git clone https://github.com/CarmelaMartinezMori/glossier.git`
 2. Navega al directorio del proyecto: `cd glossier-ecommerce`
 3. Instala las dependencias: `npm install`
 4. Inicia el servidor de desarrollo: `npm start`
@@ -44,6 +44,6 @@ Si tienes alguna pregunta o comentario sobre el proyecto, no dudes en ponerte en
 
 - Nombre: Carmela Martinez Mori
 - Correo electrónico: carmelamartinezmori@gmail.com
-- GitHub: [carmelamartinez](https://github.com/carmelamartinez)
+- GitHub: [carmelamartinezmori](https://github.com/carmelamartinezmori)
 
 ¡Gracias por visitar Glossier E-Commerce!

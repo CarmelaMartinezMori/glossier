@@ -1,11 +1,67 @@
-.itemCart{
-    display: flex;
-    border-radius: 1px solid grey;
-    max-width: 500px;
-    margin: 1rem auto;
+.itemCartWrapper {
+    margin-top: 20px; /* Ajusta este valor según el espacio deseado */
 }
 
-.itemCart img{
+.itemCart {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    padding: 0.5rem 1rem;
+    margin: 40px;
+    width: 650px;
+    margin: 0 auto;
+}
+
+.itemCart img {
     width: 200px;
-    margin-right: 1rem;
+    height: auto;
+    margin: 1rem;
+}
+
+.itemCart .productInfo {
+    flex-grow: 1;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.itemCart .nameAndPrice {
+    display: flex;
+    flex-direction: column;
+}
+
+.itemCart .productName {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.itemCart .productPrice {
+    font-size: 1rem;
+    color: #555;
+}
+
+.itemCart .productQuantity {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 0.5rem;
+}
+
+.itemCart button {
+    background-color: #dc3545;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.itemCart button:hover {
+    background-color: #c02942;
+}
+
+.itemCartWrapper {
+    margin-bottom: 20px;
 }

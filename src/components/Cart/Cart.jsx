@@ -1,50 +1,30 @@
-import React from 'react'
-import { useCartContext } from '../../context/CartContext'
-import { Link } from 'react-router-dom'
-import ItemCart from '../ItemCart/ItemCart'
-import { addDoc, collection, getFirestore } from 'firebase/firestore';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useCartContext } from '../../context/CartContext';
+import './Cart.css';
+import ItemCart from '../ItemCart/ItemCart';
 
 const Cart = () => {
-  const {cart, totalPrice} = useCartContext()
+  const { cart, totalPrice } = useCartContext();
 
-  const order = {
-    buyer: {
-      name: 'Carmela',
-      email: 'carmemm@gmail.com',
-      phone: '12345678',
-      address: 'asdd'
-    },
-    items: cart.map(product =>({ id: product.id, name: product.name, price: product.price, quantity: product.quantity})),
-    total: totalPrice()
+  if (cart.length === 0) {
+    return (
+      <div className='cartContainer'>
+        <div className="emptyCart">
+          <p className="emptyMessage">No hay elementos en el carrito</p>
+          <Link to="/" className="shopLink">Hacer compras</Link>
+        </div>
+      </div>
+    );
   }
-
-  const handleClick = () => {
-    const db = getFirestore();
-    const ordersCollection = collection(db, 'orders');
-    addDoc(ordersCollection, order)
-    .then(({id}) => console.log(id))
-  }
-
-  if(cart.length === 0){
-    return(
-      <>
-        <p>No hay elementos en el carrito</p>
-        <Link to="/">Hacer compras</Link>
-      </>
-    )
-  } 
 
   return (
     <div>
-      {
-        cart.map(product => <ItemCart key={product.id} product={product}/>)
-      }
-      <p>
-        total: $ {totalPrice()}
-      </p>
-      <button onClick={handleClick}>Emitir compra</button>
+      {cart.map(product => <ItemCart key={product.id} product={product} />)}
+      <p className="subtotal">Subtotal: ${totalPrice()}</p>
+      <Link to='/checkout' className="checkoutLink">Checkout</Link>
     </div>
-  )
+  );
 }
 
-export default Cart
+export default Cart;
