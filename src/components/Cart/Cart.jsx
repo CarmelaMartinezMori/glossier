@@ -21,8 +21,10 @@ const Cart = () => {
   return (
     <div>
       {cart.map(product => <ItemCart key={product.id} product={product} />)}
-      <p className="subtotal">Subtotal: ${totalPrice()}</p>
-      <Link to='/checkout' className="checkoutLink">Checkout</Link>
+      <p className="subtotal">Subtotal: <span className="subtotal-price">${totalPrice()}</span></p>
+      <div className="checkout-container">
+        <Link to='/checkout' className="checkout-link">Checkout</Link>
+      </div>
     </div>
   );
 }

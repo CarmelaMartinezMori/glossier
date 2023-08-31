@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useCartContext } from '../../context/CartContext';
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
+import './Checkout.css'; // Importa tu archivo CSS
 
 const Checkout = () => {
   const { cart, totalPrice } = useCartContext();
@@ -23,18 +24,20 @@ const Checkout = () => {
     const ordersCollection = collection(db, 'orders');
     addDoc(ordersCollection, order)
       .then(({ id }) => {
-        setOrderId(id); // Guarda el ID de la orden en el estado
+        setOrderId(id);
       });
   }
 
   return (
-    <div>
+    <div className="checkoutContainer">
       {orderId ? (
-        <div>
+        <div className="checkoutSuccess">
           <p>Compra realizada con éxito. ID de la orden: {orderId}</p>
         </div>
       ) : (
-        <CheckoutForm onSubmit={handleSubmitOrder} />
+        <div className="checkoutFormContainer">
+          <CheckoutForm onSubmit={handleSubmitOrder} />
+        </div>
       )}
     </div>
   );

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './CheckoutForm.css'
 
 const CheckoutForm = ({ onSubmit }) => {
   const [formData, setFormData] = useState({
@@ -31,6 +32,7 @@ const CheckoutForm = ({ onSubmit }) => {
         value={formData.name}
         onChange={handleInputChange}
         required
+        autoComplete="name"
       />
       <label htmlFor="email">Email:</label>
       <input
@@ -40,6 +42,7 @@ const CheckoutForm = ({ onSubmit }) => {
         value={formData.email}
         onChange={handleInputChange}
         required
+        autoComplete="email"
       />
       <label htmlFor="phone">Phone:</label>
       <input
@@ -49,6 +52,7 @@ const CheckoutForm = ({ onSubmit }) => {
         value={formData.phone}
         onChange={handleInputChange}
         required
+        autoComplete="tel"
       />
       <label htmlFor="address">Address:</label>
       <textarea
@@ -57,6 +61,7 @@ const CheckoutForm = ({ onSubmit }) => {
         value={formData.address}
         onChange={handleInputChange}
         required
+        autoComplete="street-address"
       />
       <button type="submit">Place Order</button>
     </form>

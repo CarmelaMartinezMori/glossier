@@ -20,7 +20,9 @@ const ItemDetail = ({ img, name, description, price, onAddToCart }) => {
           <div className="item-price"> ${price}</div>
           <div className="add-to-bag-button-container">
             {goToCart ? (
-              <Link to="/cart">Go to Cart</Link>
+              <Link to="/cart" className="add-to-cart-link">
+                Go to Cart
+              </Link>
             ) : (
               <ItemCount initial={1} stock={10} onAdd={handleAddToCart} />
             )}
